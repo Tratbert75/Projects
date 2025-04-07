@@ -9,12 +9,16 @@ import copy
 #cube 6 is orange
 def turnRightUp(cube):
     oldCube = copy.deepcopy(cube)
+    #white face
     for i in range(3):
         cube[0][i][2] = oldCube[5][i][2]
+    #green face
     for i in range(3):
         cube[1][0][i] = oldCube[1][2-i][0]
         cube[1][1][i] = oldCube[1][2-i][1]
         cube[1][2][i] = oldCube[1][2-i][2]
+    #yellow face
+    
     print("old cube", oldCube)
     print("new cube",  cube)
 rubixCube = [[[[2], [3], [2]],
